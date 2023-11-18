@@ -1,7 +1,18 @@
-class Solution:
-    def twoSum(self, nums: list[int], target: int) -> list[int]:
+"""
+#1
+https://leetcode.com/problems/two-sum/description/
+
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+You can return the answer in any order.
+"""
+
+
+class TwoSum:
+    @staticmethod
+    def two_sum(nums: list[int], target: int) -> list[int]:
         for i in range(len(nums)):
-            for j in range(i+1, len(nums)):
+            for j in range(i + 1, len(nums)):
                 if nums[i] + nums[j] == target:
                     return [i, j]
         return []
