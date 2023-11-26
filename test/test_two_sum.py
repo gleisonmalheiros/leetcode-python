@@ -1,5 +1,5 @@
 import unittest
-from two_sum import TwoSum
+from easy.two_sum import TwoSum
 
 
 class TestTwoSum(unittest.TestCase):
@@ -25,6 +25,9 @@ class TestTwoSum(unittest.TestCase):
         expected = [0, 1]
         self.assertEqual(expected, actual)
 
-
-if __name__ == '__main__':
-    unittest.main()
+    def test_case4(self):
+        nums = []
+        target = 0
+        actual = TwoSum.two_sum(nums, target)
+        expected = []
+        self.assertEqual(expected, actual)
